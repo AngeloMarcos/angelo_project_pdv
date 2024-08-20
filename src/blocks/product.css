@@ -1,0 +1,26 @@
+.product {
+    background-color: #D9D9D9;
+    height: 100vh; /* Ajusta a altura para ocupar toda a tela */
+    width: calc(100vw - 20vw ); /* Subtrai a largura do menu e as margens */
+    
+    padding: 20px; /* Adiciona padding interno para espaçamento */
+    overflow-y: auto; /* Permite rolagem vertical caso o conteúdo ultrapasse a altura */
+    box-sizing: border-box; /* Inclui o padding e as bordas na largura e altura */
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.product__photo{
+    width: 250px;
+    height: 250px;
+    background-color:#67B0FF;
+    
+}
+.product__photo-icon{
+    width: 100%; /* Define a largura da imagem para ocupar 100% do contêiner */
+    height: 100%; /* Define a altura da imagem para ocupar 100% do contêiner */
+    object-fit: contain; /* Ajusta a imagem para caber dentro do contêiner sem distorcer */
+    max-width: 100px; /* Limita a largura máxima da imagem */
+    max-height: 100px; 
+}

@@ -1,0 +1,27 @@
+.header{
+    background-color: #67B0FF;
+    display: flex;
+    min-width: 320px;
+    width: 100%;
+    height: 150px;
+}
+.header__logo-content{
+    padding: 25px;
+
+}
+
+.header__logo{
+    width: 100px;
+}
+.header__menu{
+    
+    padding: 50px;
+}
+.header__list{
+    list-style-type: none;
+}
+.header__nav-button{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
