@@ -610,14 +610,16 @@ document.querySelector(".product__btn-submit").addEventListener("click", functio
     displayProducts();
 });
 document.querySelector(".product__btn-list").addEventListener("click", function(event) {
-    // Seleciona o elemento com a classe .product__info
+    // Seleciona a seção .product
     const productSection = document.querySelector(".product");
-    // Oculta a seção .product__info
-    productInfoSection.style.display = "none";
+    // Oculta a seção .product
+    productSection.style.display = "none";
     // Seleciona a seção .list
     const productListSection = document.querySelector(".list");
-    // Alterna a visibilidade da seção .list
-    productListSection.classList.toggle("list__active");
+    // Remove a classe .list__active se já estiver aplicada
+    productListSection.classList.remove("list__active");
+    // Adiciona a classe .list__active para tornar a seção visível
+    productListSection.classList.add("list__active");
 });
 function displayProducts() {
     const productItems = document.getElementById("productItems");

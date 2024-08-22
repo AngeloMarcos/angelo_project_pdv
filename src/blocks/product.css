@@ -51,7 +51,7 @@
     flex-direction: column;
 }
 
-.product__form-group label {
+.product__form-group  {
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -59,9 +59,9 @@
 .product__option-group {
     display: block;
     align-items: column;
+    width: 10vw;
 }
 
-/* Estilo individual para os botões */
 .product__option {
    margin-top: 20%;
     display: block;
@@ -72,7 +72,7 @@
 }
 /* Estilo dos botões */
 .product__btn {
-    padding: 10px 20px; /* Ajusta o padding para tornar os botões mais largos */
+ 
     background-color: #007BFF;
     color: white;
     border: none;
@@ -80,7 +80,7 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100px; /* Faz com que os botões ocupem toda a largura do contêiner */
+    width: 100%; /* Faz com que os botões ocupem toda a largura do contêiner */
     height: 55px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar um efeito de elevação */
 }

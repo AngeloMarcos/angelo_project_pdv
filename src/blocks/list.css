@@ -1,12 +1,14 @@
 /* list.css */
 
 .list {
-    background-color: #f4f4f4;
-    padding: 20px;
+    background-color: #D9D9D9;
+    height: 100vh; /* Ajusta a altura para ocupar toda a tela */
+    width: calc(100vw - 20vw); /* Subtrai a largura do menu e as margens */
+    padding: 20px; /* Adiciona padding interno para espaçamento */
+    overflow-y: auto; /* Permite rolagem vertical caso o conteúdo ultrapasse a altura */
+    box-sizing: border-box; /* Inclui o padding e as bordas na largura e altura */
     display: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    justify-content: space-around;
 }
 
 .list__title {
@@ -21,7 +23,7 @@
     margin: 0;
 }
 .list__active{
-    display: block;
+    display: flex;
 }
 .list__items li {
     background-color: #fff;
@@ -34,6 +36,3 @@
     align-items: center;
 }
 
-.list__items li:last-child {
-    margin-bottom: 0;
-}

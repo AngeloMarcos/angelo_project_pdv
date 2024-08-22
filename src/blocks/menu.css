@@ -1,30 +1,42 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 20vw;
+    margin: 0 auto;
+    padding-top: 20px; 
+}
+
+.menu__tittle {
+    color: black;
+    margin-bottom: 30px; 
+    text-align: center;
+}
+
 .menu__modles__option {
     background-color: #67B0FF;
-    min-width: 20vw;
-    height: 50px;
-    border-radius: 25px; /* Tornar o botão redondo */
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
     list-style-type: none;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    font-family: 'Arial', sans-serif; /* Escolher uma fonte simples e limpa */
-    cursor: pointer; /* Mudar o cursor para indicar que é clicável */
-    transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
-}
-.menu__tittle{
-    
-    color: black;
-    padding-top: 20px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px; 
 }
 .menu__modles__option:hover {
-    background-color: #0056b3; /* Alterar cor ao passar o mouse */
+    background-color: #0056b3;
 }
 
 .menu__modles__option-list {
     text-decoration: none;
     padding: 3px;
     font-size: 20px;
-    color: rgb(0, 0, 0); /* Tornar o texto branco para contraste */
+    color: rgb(0, 0, 0);
 }
