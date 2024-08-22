@@ -237,32 +237,32 @@ template, [hidden] {
 }
 
 .body {
-  background-color: #007bff;
+  background-color: #0d4959;
 }
 
 .menu {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-width: 20vw;
+  min-width: 25vw;
   margin: 0 auto;
   padding-top: 20px;
   display: flex;
 }
 
 .menu__tittle {
-  color: #000;
+  color: #fff;
   text-align: center;
   margin-bottom: 30px;
 }
 
 .menu__modles__option {
   cursor: pointer;
-  background-color: #67b0ff;
+  background-color: #69deff;
   border-radius: 25px;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 250px;
   height: 30px;
   margin-bottom: 15px;
   padding: 15px;
@@ -286,13 +286,23 @@ template, [hidden] {
 
 .product {
   box-sizing: border-box;
-  background-color: #d9d9d9;
-  justify-content: space-around;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
   width: 80vw;
-  height: 100vh;
-  padding: 20px;
+  min-height: 100vh;
+  margin: 0 auto;
   display: flex;
   overflow-y: auto;
+}
+
+.prduct__label {
+  display: flex;
+}
+
+.product__tittle {
+  text-align: center;
+  padding: 5vh;
 }
 
 .product__photo {
@@ -318,7 +328,8 @@ template, [hidden] {
 }
 
 .product__info {
-  width: 40vw;
+  width: 30vw;
+  padding: 0 2vw;
 }
 
 .product__photo-icon {
@@ -342,7 +353,7 @@ template, [hidden] {
 
 .product__option-group {
   align-items: column;
-  width: 10vw;
+  width: 12vw;
   display: block;
 }
 

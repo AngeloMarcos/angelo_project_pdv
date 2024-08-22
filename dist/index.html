@@ -17,85 +17,101 @@
       <section class="menu">
         <h1 class="menu__tittle">Módulos</h1>
         
+        <ul class="menu__modles__list">
           <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Controle de Estoque</a></li>
-        
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Cadastro de Produtos</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Gestão de Categorias</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Vendas</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Gestão de Clientes</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Relatórios</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Controle de Caixa</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Gestão de Fornecedores</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Promoções e Descontos</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Histórico de Transações</a></li>
+          <li class="menu__modles__option"><a class="menu__modles__option-list" href="#">Configurações do Sistema</a></li>
+        </ul>
       </section>
       <section class="product">
-        <div class="product__photo">
-             <a class="product__add" href="#"> 
-              <img class="product__photo-icon" src="/plus.516f8977.png" alt="Adicionar imagem">
-          Adicionar Imagem
-             </a>
+        <div>
+          <h1 class="product__tittle">Adicionar Produto</h1>
         </div>
-        <div class="product__info">
-          <form class="product__form" action="" method="POST" id="productForm">
-              <!-- Nome do Produto -->
-              <div class="product__form-group">
-                  <label for="product__name">Nome do Produto:</label>
-                  <input type="text" id="product__name" name="product__name" required="">
-              </div>
-              
-              <!-- Categoria -->
-              <div class="product__form-group">
-                  <label for="product__category">Categoria:</label>
-                  <select id="product__category" name="product__category" required="">
-                      <option value="eletronicos">Eletrônicos</option>
-                      <option value="alimentos">Alimentos</option>
-                      <option value="vestuario">Vestuário</option>
-                      <option value="moveis">Móveis</option>
-                      <option value="outros">Outros</option>
-                  </select>
-              </div>
-              
-              <!-- Quantidade -->
-              <div class="product__form-group">
-                  <label for="product__quantity">Quantidade:</label>
-                  <input type="number" id="product__quantity" name="product__quantity" required="" min="0">
-              </div>
-              
-              <!-- Preço de Custo -->
-              <div class="product__form-group">
-                  <label for="product__cost-price">Preço de Custo:</label>
-                  <input type="number" id="product__cost-price" name="product__cost-price" required="" min="0" step="0.01">
-              </div>
-              
-              <!-- Preço de Venda -->
-              <div class="product__form-group">
-                  <label for="product__sale-price">Preço de Venda:</label>
-                  <input type="number" id="product__sale-price" name="product__sale-price" required="" min="0" step="0.01">
-              </div>
-              
-              <!-- Fornecedor -->
-              <div class="product__form-group">
-                  <label for="product__supplier">Fornecedor:</label>
-                  <input type="text" id="product__supplier" name="product__supplier" required="">
-              </div>
-              
-              <!-- Data de Entrada -->
-              <div class="product__form-group">
-                  <label for="product__entry-date">Data de Entrada:</label>
-                  <input type="date" id="product__entry-date" name="product__entry-date" required="">
-              </div>
-              
-              <!-- Botão de Enviar -->
-              <div class="product__form-group">
-                  <button type="submit" class="product__btn product__btn-submit">Adicionar Produto</button>
-                  
-              
-                </div>
-                
-          </form>
-          
-      </div>
-        <div class="product__option-group">
-          <div class="product__option">
-              <button type="button" class="product__btn product__btn-clear">Limpar Campos</button>
-          </div>
-          <div class="product__option">
-              <button type="button" class="product__btn product__btn-list">Lista de Produtos</button>
-          </div>
+        <div class="prduct__label">
+          <div class="product__photo">
+            <a class="product__add" href="#"> 
+             <img class="product__photo-icon" src="/plus.516f8977.png" alt="Adicionar imagem">
+         Adicionar Imagem
+            </a>
        </div>
-      
+       <div class="product__info">
+         <form class="product__form" action="" method="POST" id="productForm">
+             <!-- Nome do Produto -->
+             <div class="product__form-group">
+                 <label for="product__name">Nome do Produto:</label>
+                 <input type="text" id="product__name" name="product__name" required="">
+             </div>
+             
+             <!-- Categoria -->
+             <div class="product__form-group">
+                 <label for="product__category">Categoria:</label>
+                 <select id="product__category" name="product__category" required="">
+                     <option value="eletronicos">Eletrônicos</option>
+                     <option value="alimentos">Alimentos</option>
+                     <option value="vestuario">Vestuário</option>
+                     <option value="moveis">Móveis</option>
+                     <option value="outros">Outros</option>
+                 </select>
+             </div>
+             
+             <!-- Quantidade -->
+             <div class="product__form-group">
+                 <label for="product__quantity">Quantidade:</label>
+                 <input type="number" id="product__quantity" name="product__quantity" required="" min="0">
+             </div>
+             
+             <!-- Preço de Custo -->
+             <div class="product__form-group">
+                 <label for="product__cost-price">Preço de Custo:</label>
+                 <input type="number" id="product__cost-price" name="product__cost-price" required="" min="0" step="0.01">
+             </div>
+             
+             <!-- Preço de Venda -->
+             <div class="product__form-group">
+                 <label for="product__sale-price">Preço de Venda:</label>
+                 <input type="number" id="product__sale-price" name="product__sale-price" required="" min="0" step="0.01">
+             </div>
+             
+             <!-- Fornecedor -->
+             <div class="product__form-group">
+                 <label for="product__supplier">Fornecedor:</label>
+                 <input type="text" id="product__supplier" name="product__supplier" required="">
+             </div>
+             
+             <!-- Data de Entrada -->
+             <div class="product__form-group">
+                 <label for="product__entry-date">Data de Entrada:</label>
+                 <input type="date" id="product__entry-date" name="product__entry-date" required="">
+             </div>
+             
+             <!-- Botão de Enviar -->
+             <div class="product__form-group">
+                 <button type="submit" class="product__btn product__btn-submit">Adicionar Produto</button>
+                 
+             
+               </div>
+               
+         </form>
+         
+     </div>
+       <div class="product__option-group">
+         <div class="product__option">
+             <button type="button" class="product__btn product__btn-clear">Limpar Campos</button>
+         </div>
+         <div class="product__option">
+             <button type="button" class="product__btn product__btn-list">Lista de Produtos</button>
+         </div>
+      </div>
+     
+        </div>
       
       </section>
       
@@ -106,10 +122,10 @@
       </div>
       <div class="product__option-group">
         <div class="product__option">
-            <button type="button" class="product__btn product__btn-clear">Limpar Campos</button>
+            <button type="button" class="product__btn product__btn-clear">Excluir Produto</button>
         </div>
         <div class="product__option">
-            <button type="button" class="product__btn product__btn-list">Lista de Produtos</button>
+            <button type="button" class="product__btn product__btn-list">Adicionar Produto</button>
         </div>
      </div>
       </section>
