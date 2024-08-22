@@ -1,26 +1,90 @@
 .product {
     background-color: #D9D9D9;
     height: 100vh; /* Ajusta a altura para ocupar toda a tela */
-    width: calc(100vw - 20vw ); /* Subtrai a largura do menu e as margens */
-    
+    width: calc(100vw - 20vw); /* Subtrai a largura do menu e as margens */
     padding: 20px; /* Adiciona padding interno para espaçamento */
     overflow-y: auto; /* Permite rolagem vertical caso o conteúdo ultrapasse a altura */
     box-sizing: border-box; /* Inclui o padding e as bordas na largura e altura */
     display: flex;
-    flex-direction: column;
-    
-    
+    justify-content: space-around;
 }
-.product__photo{
-    width: 250px;
-    height: 250px;
-    background-color:#67B0FF;
-    
+
+.product__photo {
+    width: 350px;
+    height: 350px;
+    background-color: #67B0FF;
+    min-width: 200px;
+    display: flex;
+    align-items: left; /* Alinha o conteúdo dentro do contêiner verticalmente */
+    justify-content: center; /* Alinha o conteúdo dentro do contêiner horizontalmente */
+    border-radius: 10px; /* Adiciona bordas arredondadas para uma aparência melhor */
 }
-.product__photo-icon{
-    width: 100%; /* Define a largura da imagem para ocupar 100% do contêiner */
-    height: 100%; /* Define a altura da imagem para ocupar 100% do contêiner */
+
+.product__add {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    flex-direction: column; /* Empilha o ícone e o texto verticalmente */
+    align-items: center; /* Centraliza o ícone e o texto */
+    justify-content: center; /* Centraliza o ícone e o texto */
+    gap: 10px; /* Adiciona um espaço entre o ícone e o texto */
+}
+.product__info{
+    
+    width: 40vw;
+}
+.product__photo-icon {
+    width: 100px; /* Define a largura da imagem */
+    height: 100px; /* Define a altura da imagem */
     object-fit: contain; /* Ajusta a imagem para caber dentro do contêiner sem distorcer */
-    max-width: 100px; /* Limita a largura máxima da imagem */
-    max-height: 100px; 
+}
+
+.product__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product__form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.product__option-group {
+    display: block;
+    align-items: column;
+}
+
+/* Estilo individual para os botões */
+.product__option {
+   margin-top: 20%;
+    display: block;
+   
+}
+.product__btn-submit{
+    min-width: 100%;
+}
+/* Estilo dos botões */
+.product__btn {
+    padding: 10px 20px; /* Ajusta o padding para tornar os botões mais largos */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px; /* Faz com que os botões ocupem toda a largura do contêiner */
+    height: 55px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar um efeito de elevação */
+}
+
+.product__btn:hover {
+    background-color: #0056b3; /* Muda a cor ao passar o mouse */
 }
