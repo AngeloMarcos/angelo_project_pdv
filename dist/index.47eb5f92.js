@@ -589,8 +589,12 @@ var _productJs = require("./product.js");
 var _productJsDefault = parcelHelpers.interopDefault(_productJs);
 var _productManagerJs = require("./productManager.js");
 var _productManagerJsDefault = parcelHelpers.interopDefault(_productManagerJs);
+var _listJs = require("./list.js");
+var _listJsDefault = parcelHelpers.interopDefault(_listJs);
 // Criar instância do gerenciador de produtos
 const productManager = new (0, _productManagerJsDefault.default)();
+// Criar instância da lista de produtos
+const productList = new (0, _listJsDefault.default)(productManager);
 // Adicionar eventos e lógica para o formulário e exibição
 document.querySelector(".product__btn-submit").addEventListener("click", function(event) {
     event.preventDefault();
@@ -607,35 +611,21 @@ document.querySelector(".product__btn-submit").addEventListener("click", functio
     // Adicionar o produto ao gerenciador
     productManager.addProduct(product);
     // Atualizar a lista de exibição
-    displayProducts();
+    productList.renderList();
 });
 document.querySelector(".product__btn-list").addEventListener("click", function(event) {
-    // Seleciona a seção .product
     const productSection = document.querySelector(".product");
-    // Oculta a seção .product
     productSection.style.display = "none";
-    // Seleciona a seção .list
     const productListSection = document.querySelector(".list");
-    // Remove a classe .list__active se já estiver aplicada
-    productListSection.classList.remove("list__active");
-    // Adiciona a classe .list__active para tornar a seção visível
     productListSection.classList.add("list__active");
+    productList.renderList();
 });
-function displayProducts() {
-    const productItems = document.getElementById("productItems");
-    productItems.innerHTML = "";
-    productManager.getProducts().forEach((product, index)=>{
-        const productItem = document.createElement("li");
-        productItem.textContent = `Produto ${index + 1}: ${product.name}, Categoria: ${product.category}, Quantidade: ${product.quantity}, Pre\xe7o de Custo: R$${product.costPrice}, Pre\xe7o de Venda: R$${product.salePrice}, Fornecedor: ${product.supplier}, Data de Entrada: ${product.entryDate}`;
-        productItems.appendChild(productItem);
-    });
-}
 // Função para limpar o formulário
 document.querySelector(".product__btn-clear").addEventListener("click", function() {
     document.getElementById("productForm").reset();
 });
 
-},{"./product.js":"1jpQq","./productManager.js":"8wqcO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1jpQq":[function(require,module,exports) {
+},{"./product.js":"1jpQq","./productManager.js":"8wqcO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./list.js":"br2t1"}],"1jpQq":[function(require,module,exports) {
 // Exemplo de classe Product
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -698,6 +688,29 @@ class ProductManager {
     }
 }
 exports.default = ProductManager;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"br2t1":[function(require,module,exports) {
+// List.js
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class List {
+    constructor(productManager){
+        this.productManager = productManager;
+    }
+    renderList() {
+        const productItems = document.getElementById("productItems");
+        productItems.innerHTML = "";
+        this.productManager.getProducts().forEach((product, index)=>{
+            const productItem = document.createElement("li");
+            productItem.classList.add("product__item");
+            if (index % 2 === 0) productItem.classList.add("product__item--even");
+            else productItem.classList.add("product__item--odd");
+            productItem.textContent = `Produto ${index + 1}: ${product.name}, Categoria: ${product.category}, Quantidade: ${product.quantity}, Pre\xe7o de Custo: R$${product.costPrice}, Pre\xe7o de Venda: R$${product.salePrice}, Fornecedor: ${product.supplier}, Data de Entrada: ${product.entryDate}`;
+            productItems.appendChild(productItem);
+        });
+    }
+}
+exports.default = List;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["670yk","g54gV"], "g54gV", "parcelRequire952a")
 

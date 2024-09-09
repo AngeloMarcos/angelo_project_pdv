@@ -17,6 +17,9 @@
     text-align: center;
     padding:  5vh ;
 }
+.product__add-active{
+    display: block;
+}
 .product__photo {
     width: 350px;
     height: 350px;

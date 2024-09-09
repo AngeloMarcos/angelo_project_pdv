@@ -305,6 +305,10 @@ template, [hidden] {
   padding: 5vh;
 }
 
+.product__add-active {
+  display: block;
+}
+
 .product__photo {
   align-items: left;
   background-color: #67b0ff;
@@ -419,5 +423,13 @@ template, [hidden] {
   margin-bottom: 10px;
   padding: 10px;
   display: flex;
+}
+
+.product__item--even {
+  background-color: #f9f9f9;
+}
+
+.product__item--odd {
+  background-color: #fff;
 }
 /*# sourceMappingURL=index.ac2f1e77.css.map */
